@@ -1,5 +1,4 @@
 import React from 'react';
-import { exportAllDeclaration } from '@babel/types';
 
 describe('JSX', () => {
   it('calls React.createElement', () => {
