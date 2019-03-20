@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint",
-    "format": "prettier-eslint"
+    "format": "prettier-eslint",
+    "start": "react-scripts start"
   },
   "keywords": [],
   "author": "",
