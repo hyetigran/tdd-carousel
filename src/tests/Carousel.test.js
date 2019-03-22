@@ -68,15 +68,15 @@ describe('Carousel', () => {
   describe('with the first slide selected', () => {
     it('wraps `slideIndex` to the max value when the Prev button is clicked', () => {
       wrapper.setState({ slideIndex: 0 });
-      wrapper.find('[data-action="prev]').simulate('click');
+      wrapper.find('[data-action="prev"]').simulate('click');
       expect(wrapper.state('slideIndex')).toBe(slides.length - 1);
     });
   });
   describe('with the last slide selected', () => {
     it('wraps `slideIndex` to the min value when the Next button is clicked', () => {
       wrapper.setState({ slideIndex: slides.length - 1 });
-      wrapper.find('[data-action="next').simulate('click');
-      expect(wrapper.state('slidesIndex')).toBe(0);
+      wrapper.find('[data-action="next"]').simulate('click');
+      expect(wrapper.state('slideIndex')).toBe(0);
     });
   });
   it('renders the current slide as a CarouselSlide', () => {
