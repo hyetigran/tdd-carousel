@@ -11,7 +11,7 @@ exports[`CarouselSlide renders correctly 1`] = `
       Description
     </strong>
      
-    Attribtuion
+    Attribution
   </figcaption>
 </figure>
 `;

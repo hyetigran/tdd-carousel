@@ -13,6 +13,7 @@ describe('CarouselSlide', () => {
       />
     );
   });
+
   it('renders correctly', () => {
     wrapper.setProps({
       description: 'Description',
@@ -41,9 +42,11 @@ describe('Img', () => {
       <CarouselSlide.defaultProps.Img src={imgUrl} imgHeight={500} />
     );
   });
+
   it('renders correctly', () => {
     expect(mounted.find('img')).toMatchSnapshot();
   });
+
   it('uses imgHeight as the height style property', () => {
     expect(mounted).toHaveStyleRule('height', '500px');
     mounted.setProps({ imgHeight: 'calc(100vh - 100px)' });
