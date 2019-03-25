@@ -28,7 +28,7 @@ export default (Component, indexPropName) => {
     }
     constructor(props) {
       super(props);
-      this.sate = {
+      this.state = {
         index: props[defaultIndexPropName],
       };
     }

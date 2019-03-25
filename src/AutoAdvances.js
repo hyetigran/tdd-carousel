@@ -15,28 +15,33 @@ export default (Component, propName, upperBoundPropName) =>
       ]).isRequired,
       autoAdvanceDelay: PropTypes.number.isRequired,
     };
+
     static defaultProps = {
       autoAdvanceDelay: 10e3,
     };
+
     componentDidMount() {
       this.startTimer();
     }
+
     componentDidUpdate(prevProps) {
       if (
-        prevProps[propName] !== this.props[propsName] ||
+        prevProps[propName] !== this.props[propName] ||
         prevProps[upperBoundPropName] !== this.props[upperBoundPropName]
       ) {
-        this.startTime();
+        this.startTimer(); //(1)
       }
     }
+
     componentWillUnmount() {
-      clearTimeout(this._timer);
+      clearTimeout(this._timer); //(2)
     }
+
     startTimer() {
-      clearTimeout(this._timer);
+      clearTimeout(this._timer); //(3)
       if (!this.props.autoAdvanceDelay) return;
 
-      let upperBound;
+      let upperBound; //(4)
       if (typeof this.props[upperBoundPropName] === 'number') {
         upperBound = this.props[upperBoundPropName];
       } else if (this.props[upperBoundPropName] != null) {
@@ -47,6 +52,7 @@ export default (Component, propName, upperBoundPropName) =>
         this.props[`${propName}Increment`](upperBound);
       }, this.props.autoAdvanceDelay);
     }
+
     render() {
       const { autoAdvanceDelay: _autoAdvanceDelay, ...rest } = this.props;
       return <Component {...rest} />;
