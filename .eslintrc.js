@@ -8,7 +8,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
       modules: true,
-      experimentalObjectRestSpread: true
+      experimentalObjectRestSpread: true,
     },
   },
   env: {
@@ -18,5 +18,6 @@ module.exports = {
   rules: {
     quotes: ['error', 'single', { avoidEscape: true }],
     'comma-dangle': ['error', 'always-multiline'],
+    'no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
   },
 };
